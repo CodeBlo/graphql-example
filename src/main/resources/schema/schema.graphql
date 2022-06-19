@@ -1,0 +1,23 @@
+type Query {
+    humans(nameFilter: String, ageFilter: Int, heightFilter: Int): [Human]
+}
+
+type Mutation {
+    createHuman(input: HumanInput):Human
+}
+
+type Human {
+    name: String
+    age: Int
+    height: Int
+}
+
+input HumanInput
+{
+    name: String!
+    age: Int!
+    height: Int!
+}
+
+
+
